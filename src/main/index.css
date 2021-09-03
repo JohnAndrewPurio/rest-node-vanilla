@@ -1,0 +1,32 @@
+
+
+#start-bedtime-redirect {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    display: flex;
+    border-radius: 999vmin;
+    align-items: center;
+    gap: 1em;
+}
+
+#start-bedtime-dialog {
+    background-color: var(--very-dark-green);
+    position: absolute;
+    width: var(--start-bedtime-dialog-width);
+    min-height: var(--start-bedtime-dialog-min-height);
+
+    top: calc( var(--nav-height) + 1em );
+    left: calc( 50% - ( var(--start-bedtime-dialog-width) / 2 ) );
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}

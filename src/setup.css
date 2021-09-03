@@ -1,0 +1,149 @@
+:root {
+    --default-font: Georgia, 'Times New Roman', Times, serif;
+    --nav-height: 4em;
+    --start-bedtime-dialog-width: 20em;
+    --start-bedtime-dialog-min-height: calc(100vh - 2 * ( var(--nav-height) + 1em ) );
+
+    /* Color Pallete */
+    --light-grayish-green: #cddcbc;
+    --dark-moderate-green: #80aa55;
+    --very-dark-green: #406916;
+    --very-dark-desaturated-green: #3b4422;
+    
+    --light-grayish-red: #f3f1f1;
+    --light-grayish-red-filter: invert(100%) sepia(3%) saturate(863%) hue-rotate(213deg) brightness(116%) contrast(89%);
+    --gray: #bfbfbf;
+    --dark-gray: #999999;
+    --very-dark-gray: #404040;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: var(--light-grayish-red);
+
+    font-family: var(--default-font);
+    font-size: 15px;
+}
+
+#root {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--light-grayish-red);
+    position: relative;
+    user-select: none;
+}
+
+button, .button {
+    background-color: var(--dark-moderate-green);
+    border: none;
+    min-width: 3rem;
+    min-height: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem;
+
+    cursor: pointer;
+}  
+
+nav {
+    background-color: var(--dark-moderate-green);
+    height: var(--nav-height);
+    padding: 1em;
+
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+select, option {
+    padding: 0.2rem;
+    color: var(--very-dark-green);
+}
+
+.icon-button, .icon-button:active {
+    border-radius: 50%;
+}
+
+.svg {
+    filter: var(--light-grayish-red-filter);
+}
+
+.integrations {
+  padding: 1em;
+  margin: 1em;
+  border-radius: 1em;
+  border: 1px solid var(--light-grayish-red);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--gray);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--dark-moderate-green);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--dark-moderate-green);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

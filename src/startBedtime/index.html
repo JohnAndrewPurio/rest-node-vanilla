@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Bedtime</title>
+
+    <link rel="stylesheet" href="../setup.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="root">
+        <nav>
+            <h1 id="calculated-bedtime">
+                <span id="hours-slept">00</span>
+                <span class="tick-colon">:</span>
+                <span id="minutes-slept">00</span>
+            </h1>
+            <div class="controls">
+                <button class="icon-button">
+                    <img src="../icons/play_arrow_black_24dp.svg" alt="Sleep Controls" class="svg">
+                </button>
+                <a id="close-button" href="../main/index.html">
+                    <img src="../icons/close_black_24dp.svg" alt="Close X" class="svg">
+                </a>
+            </div>
+        </nav>
+
+        <main>
+            <div class="container-block" id="clock">
+                <h1 id="clock-hours">
+                    <span id="hours">07</span>
+                    <span class="tick-colon">:</span>
+                    <span id="minutes">09</span>
+                    <span id="time-of-day">PM</span>
+                </h1>
+
+                <div class="status-icons">
+                    <button class="icon-button">
+                        <img src="../icons/nightlight_round_black_24dp.svg" alt="Night Light" class="svg">
+                    </button>
+                    <button class="icon-button">
+                        <img src="../icons/light_mode_black_24dp.svg" alt="Night Light" class="svg">
+                    </button>
+                    <button class="icon-button">
+                        <img src="../icons/volume_up_black_24dp.svg" alt="Backround Music" class="svg">
+                    </button>
+                </div>
+            </div>
+
+            <ul class="container-block" id="summary">
+                <h2 id="summary-title">Status:</h2>
+
+                <li class="ongoing-status">
+                    <img src="../icons/volume_up_black_24dp.svg" alt="Background Sounds" class="svg">
+                    <h1>Playing Birds Chirping</h1>
+                </li>
+                <li>
+                    <img src="../icons/nightlight_round_black_24dp.svg" alt="Night Light" class="svg">
+                    <h1>Night Light On at 70%</h1>
+                </li>
+            </ul>
+        </main>
+
+        <div id="sleep-options">
+            <button class="icon-button" id="expand-button">
+                <img src="../icons/expand_less_black_24dp.svg" alt="Expand" class="svg">
+            </button>
+
+            <div class="options">
+                <div class="container-block" id="sleep-amount">
+                    <button>Wake Time</button>
+                    <button>Sleep Hours</button>
+                </div>
+                
+                <div class="integrations" id="hardware-integration">
+                    <h2>Hardware Integrations</h2>
+                    <div class="container-block" id="background-sounds">
+                        <div class="setting">
+                            <select name="Nighttime Sound" id="nighttime-sounds">
+                                <option value="">Nighttime Sound</option>
+                            </select>
+        
+                            <input type="range" name="nighttimeSoundVolume" />
+                        </div>
+        
+                        <div class="setting">
+                            <select name="Waking Sound" id="waking-sound">
+                                <option value="">Waking Sound</option>
+                            </select>
+        
+                            <input type="range" name="wakingSoundVolume" />
+                        </div>
+        
+                        <select name="Techniques" id="techniques">
+                            <option value="">Techniques</option>
+                        </select>
+                    </div>
+        
+                    <div class="container-block" id="light-controls-container">
+                        <div class="light-controls" id="night-light-controls">
+                            <div class="flex">
+                                <h3>Night Light</h3>
+                                <img src="../icons/star_black_24dp.svg" alt="Night Light" class="svg">
+                            </div>
+                            
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+        
+                        <div class="light-controls" id="wake-light-controls">
+                            <div class="flex">
+                                <h3>Wake Light</h3>
+                                <img src="../icons/light_mode_black_24dp.svg" alt="Wake Light" class="svg">
+                            </div>
+        
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
